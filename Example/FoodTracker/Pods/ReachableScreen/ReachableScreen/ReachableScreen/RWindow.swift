@@ -120,12 +120,7 @@ public class RWindow: UIWindow {
     
     func touchesEnded(_ touches: Set<UITouch>) {
         if (force) {
-            let v = detectViewSelected(point: circle.center)
-            if let btn = v as? UIButton {
-                btn.sendActions(for: .touchUpInside)
-            } else if let btn = v as? UIBarButtonItem {
-                UIApplication.shared.sendAction(btn.action!, to: btn.target, from: nil, for: nil)
-            }
+            detectViewSelected(point: circle.center)?.sendActions(for: .touchUpInside)
             touchHandler(circle.center)
         }
         force = false
@@ -138,10 +133,12 @@ public class RWindow: UIWindow {
         
     }
     
-    func detectViewSelected(point: CGPoint) -> Any? {
+    func detectViewSelected(point: CGPoint) -> UIButton? {
         for view in UIApplication.shared.topMostViewController()!.view.subviews {
-            if (view.frame.maxX>=point.x && view.frame.minX<=point.x && view.frame.maxY>=point.y && view.frame.minY<=point.y){
-                return view
+            if let btn = view as? UIButton {
+                if (btn.frame.maxX>=point.x && btn.frame.minX<=point.x && btn.frame.maxY>=point.y && btn.frame.minY<=point.y){
+                    return btn
+                }
             }
         }
         return nil

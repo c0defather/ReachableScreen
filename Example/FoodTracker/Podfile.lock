@@ -1,0 +1,12 @@
+PODS:
+  - ReachableScreen (1.0.0)
+
+DEPENDENCIES:
+  - ReachableScreen
+
+SPEC CHECKSUMS:
+  ReachableScreen: 266a9dc95d4523bf76aa62c485e95c3acc31c62b
+
+PODFILE CHECKSUM: 5ae11284049b4086fa090880a39c5abda8e6e427
+
+COCOAPODS: 1.4.0

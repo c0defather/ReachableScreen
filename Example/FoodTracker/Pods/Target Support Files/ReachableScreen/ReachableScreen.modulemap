@@ -1,0 +1,6 @@
+framework module ReachableScreen {
+  umbrella header "ReachableScreen-umbrella.h"
+
+  export *
+  module * { export * }
+}
