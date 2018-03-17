@@ -99,8 +99,11 @@ public class RWindow: UIWindow {
                 box.isHidden = false
                 circle.isHidden = false
                 finger.alpha = 0.7
-                let generator = UIImpactFeedbackGenerator(style: .medium)
-                generator.impactOccurred()
+                if #available(iOS 10.0, *) {
+                    UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                } else {
+                    
+                }
             } else {
                 finger.alpha = 0.2
             }
