@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		6AAC48E8205C92D40095C2E4 /* ReachableScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AAC48E6205C92D40095C2E4 /* ReachableScreen.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6AAC48EF205C92F60095C2E4 /* RWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAC48EE205C92F60095C2E4 /* RWindow.swift */; };
+		6AAC48F1205C93100095C2E4 /* RUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAC48F0205C93100095C2E4 /* RUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6AAC48E3205C92D40095C2E4 /* ReachableScreen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReachableScreen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AAC48E6205C92D40095C2E4 /* ReachableScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReachableScreen.h; sourceTree = "<group>"; };
 		6AAC48E7205C92D40095C2E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AAC48EE205C92F60095C2E4 /* RWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RWindow.swift; sourceTree = "<group>"; };
+		6AAC48F0205C93100095C2E4 /* RUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,8 @@
 			children = (
 				6AAC48E6205C92D40095C2E4 /* ReachableScreen.h */,
 				6AAC48E7205C92D40095C2E4 /* Info.plist */,
+				6AAC48EE205C92F60095C2E4 /* RWindow.swift */,
+				6AAC48F0205C93100095C2E4 /* RUtils.swift */,
 			);
 			path = ReachableScreen;
 			sourceTree = "<group>";
@@ -95,6 +101,7 @@
 				TargetAttributes = {
 					6AAC48E2205C92D40095C2E4 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,6 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AAC48F1205C93100095C2E4 /* RUtils.swift in Sources */,
+				6AAC48EF205C92F60095C2E4 /* RWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +262,7 @@
 		6AAC48EC205C92D40095C2E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -266,6 +276,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = c0defather.ReachableScreen;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -274,6 +285,7 @@
 		6AAC48ED205C92D40095C2E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
